@@ -11,6 +11,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 3000, host: 3000
   config.vm.network "private_network", ip: "192.168.07.07"
 
+  # run script as root
+  config.vm.provision "shell",
+    path: "scripts/installer/root.sh"
+  # run script as vagrant user
+  config.vm.provision "shell",
+    path: "scripts/installer/vagrant.sh",
+    privileged: FALSE
+
   # automatically carve out 1/4 of the box resources for this VM
   config.vm.provider "virtualbox" do |v|
     host = RbConfig::CONFIG['host_os']
