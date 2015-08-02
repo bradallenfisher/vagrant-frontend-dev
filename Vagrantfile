@@ -7,9 +7,9 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # centos 6.5
   config.vm.box = "chef/centos-6.5"
-  config.vm.hostname = "local.rvm.dev"
+  config.vm.hostname = "local.frontend.dev"
   config.vm.network :forwarded_port, guest: 3000, host: 3000
-  config.vm.network "private_network", ip: "192.168.33.34"
+  config.vm.network "private_network", ip: "192.168.07.07"
 
   # automatically carve out 1/4 of the box resources for this VM
   config.vm.provider "virtualbox" do |v|
