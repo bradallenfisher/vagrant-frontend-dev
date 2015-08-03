@@ -12,4 +12,3 @@ gem install bundler
 sudo npm install
 bower install
 bundle install
-sudo npm install -g browsersync
