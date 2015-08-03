@@ -1,5 +1,8 @@
 #Get Node tools
-wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-sudo rpm -Uvh epel-release-6*.rpm
+curl --silent --location https://rpm.nodesource.com/setup | bash -
 yum -y install nodejs -y
-yum groupinstall 'Development Tools' -y
+yum groupinstall 'Development Tools'
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+sudo npm install -g browsersync
