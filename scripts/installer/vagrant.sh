@@ -4,13 +4,12 @@ source /home/vagrant/.rvm/scripts/rvm
 rvm get head
 rvm install ruby
 git clone https://github.com/heyMP/frontend-dev.git
-cd frontend-dev
+cd frontend-dev/
 sudo npm install -g bower
 sudo npm install -g gulp
 sudo npm install -g gulp-hologram
 gem install bundler
 sudo npm install
-cd frontend-dev/
-sudo npm install
 bower install
 bundle install
+sudo npm install -g browsersync
